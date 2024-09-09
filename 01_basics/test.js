@@ -11,3 +11,18 @@ accountCity = "Jammu"
 console.table([accountId,accountEmail,accountPass,accountCity]);
 
 let accountState;
+
+// Datatypes
+// number => 2 to power 53
+// bigint
+// string => ''
+// bollean =. true/false
+// null => standalone Value
+// undefined => 
+// symbol => unique
+
+
+// object
+
+console.log(type null);
+
