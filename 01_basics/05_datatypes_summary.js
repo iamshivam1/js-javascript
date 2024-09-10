@@ -11,7 +11,7 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 const bigNumber = 36367378383883n
 
@@ -27,7 +27,30 @@ let myObj = {
 }
 
 const myfunction = function(){
-    console.log("Hello World");
+    // console.log("Hello World");
 }
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Stack Memory used in (Primitive (Copy))
+// Heap Memory used in (Non Primitive (Reference))
 
+let myYoutubeName = "Shivam mahajan"
+
+let anotherName = myYoutubeName
+
+anotherName = "Shivam gupta"
+
+// console.log(anotherName);
+// console.log(myYoutubeName);
+
+let userOne = {
+    email: "user@email.com"
+    
+}
+
+let userTwo = userOne
+
+userTwo.email = "shivam@email.com"
+
+console.log(userTwo);
+console.log(userOne);
