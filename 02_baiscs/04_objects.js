@@ -9,5 +9,11 @@ const course = {
 }
 
 // course.courseInstructor
-const {courseInstructor} = course
-console.log(courseInstructor);
+const {courseInstructor: teacher} = course
+console.log(teacher);
+
+// {
+//     "name": "Raghav",
+//     "cousename": "Javascript",
+//     "price": "free"
+// }
