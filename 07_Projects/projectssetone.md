@@ -38,3 +38,46 @@ buttons.forEach(function (button) {
 
 
 ```
+
+
+## Project 2 Solution
+```javascrpit
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const results = document.querySelector('#results');
+
+  // Validate height and weight input
+  if (isNaN(height) || height <= 0) {
+    results.innerHTML = `Please give a valid height: ${height}`;
+    return;
+  } else if (isNaN(weight) || weight <= 0) {
+    results.innerHTML = `Please give a valid weight: ${weight}`;
+    return;
+  }
+
+  // Calculate BMI
+  const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+
+  // Determine the weight category
+  let weightCategory;
+  if (bmi < 18.6) {
+    weightCategory = 'Underweight';
+    console.log('Underweight');
+  } else if (bmi >= 18.6 && bmi <= 24.9) {
+    weightCategory = 'Normal Weight';
+    console.log('Normal Weight');
+  } else {
+    weightCategory = 'Overweight';
+    console.log('Overweight');
+  }
+
+  // Show the BMI value and weight category on the screen
+  results.innerHTML = `<span>BMI: ${bmi} - ${weightCategory}</span>`;
+});
+
+
+```
